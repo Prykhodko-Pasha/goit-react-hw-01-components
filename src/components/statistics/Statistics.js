@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import classes from "./Statistics.module.css";
+import PropTypes from 'prop-types';
+import classes from './Statistics.module.css';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -7,7 +7,7 @@ export default function Statistics({ title, stats }) {
       {title && <h2 className={classes.title}>{title}</h2>}
 
       <ul className={classes.stat}>
-        {stats.map((item) => (
+        {stats.map(item => (
           <li className={classes.item} key={item.id}>
             <span className={classes.label}>{item.label}</span>
             <span className={classes.percentage}>{item.percentage}</span>
@@ -25,6 +25,6 @@ Statistics.propTypes = {
       id: PropTypes.string,
       label: PropTypes.string,
       percentage: PropTypes.number,
-    })
+    }),
   ),
 };
