@@ -2,21 +2,27 @@
   display: block;
   margin: 0;
   padding: 0;
-  width: 300px;
+  width: 400px;
   height: 100%;
   background: #eee;
   list-style-type: none;
   margin: 10vh auto;
+  box-shadow: 2px 2px 5px #4069e2;
 }
 
 .item {
-  width: 300px;
+  width: 100%;
   height: 60px;
   background: #eee;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.item:hover,
+.item:focus {
+  background: rgba(153, 245, 141, 0.2);
 }
 
 .avatar {
