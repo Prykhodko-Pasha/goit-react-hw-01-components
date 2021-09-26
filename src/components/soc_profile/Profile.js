@@ -1,7 +1,8 @@
-import PropTypes from "prop-types";
-import classes from "./Profile.module.css";
+import PropTypes from 'prop-types';
+import classes from './Profile.module.css';
 
 export default function Profile({ name, tag, location, avatar, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <div className={classes.profile}>
       <div className={classes.description}>
@@ -18,15 +19,15 @@ export default function Profile({ name, tag, location, avatar, stats }) {
       <ul className={classes.stats}>
         <li>
           <span className={classes.label}>Followers</span>
-          <span className={classes.quantity}>{stats.followers}</span>
+          <span className={classes.quantity}>{followers}</span>
         </li>
         <li>
           <span className={classes.label}>Views</span>
-          <span className={classes.quantity}>{stats.views}</span>
+          <span className={classes.quantity}>{views}</span>
         </li>
         <li>
           <span className={classes.label}>Likes</span>
-          <span className={classes.quantity}>{stats.likes}</span>
+          <span className={classes.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
